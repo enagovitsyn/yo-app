@@ -3,6 +3,6 @@ build:
 debug:
 	docker run -it --rm -p 3000:1769 --name yo-app --entrypoint /bin/bash yo-app
 run:
-	docker run -d --rm -p 3000:1769 --name yo-app yo-app
+	docker run -d --rm -p 3000:1769 --name yo-app -e PYTHONUNBUFFERED=1 yo-app
 stop:
 	docker stop yo-app
