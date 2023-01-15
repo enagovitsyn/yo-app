@@ -14,6 +14,7 @@ def main_page():
 def my_form_post():
     text = request.form['text']
     if len(text) > 0:
+        print(f"{datetime.datetime.now()} {text}")
         return render_template("yo_page.html", nickname=text)
     else:
         return render_template("index.html")
